@@ -1,0 +1,23 @@
+#_*_Makefile_*_
+NAME= libft.a
+SOURCE= ./ft_putchar.c	\
+		./ft_putstr.c	\
+		./ft_strlen.c	\
+		./ft_memset.c	\
+		./ft_putnbr.c	
+CC= gcc
+FLAGS= -Wall -Werror -Wextra
+
+
+all: $(NAME)
+
+$(NAME):*.o 
+	$(CC) -c $(FLAGS) $(SOURCE)
+#the following line insert the object files and header file into the static library libft.a
+	ar -rcv $@ $^ libft.h
+
+clean:
+	rm -f *.o a.out
+fclean: clean
+	rm -f $(NAME)
+re: fclean all
