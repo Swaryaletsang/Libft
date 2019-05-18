@@ -19,5 +19,5 @@ $(NAME):*.o
 clean:
 	rm -f *.o a.out
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(NAME)
 re: fclean all
