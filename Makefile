@@ -11,10 +11,10 @@ FLAGS= -Wall -Werror -Wextra
 
 all: $(NAME)
 
-$(NAME):*.o 
+$(NAME): 
 	$(CC) -c $(FLAGS) $(SOURCE)
 #the following line insert the object files and header file into the static library libft.a
-	ar -rcv $@ $^ libft.h
+	ar -rcv $@ *.o libft.h
 
 clean:
 	rm -f *.o a.out
