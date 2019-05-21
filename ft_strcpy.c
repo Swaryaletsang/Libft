@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 10:48:25 by atau              #+#    #+#             */
-/*   Updated: 2019/05/21 16:05:45 by atau             ###   ########.fr       */
+/*   Created: 2019/05/21 15:40:43 by atau              #+#    #+#             */
+/*   Updated: 2019/05/21 16:04:48 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int			ft_atoi(char *str)
+char		*strcpy(char *dst, const char *src)
 {
-	int nb;
-	int sign;
 	int i;
 
-	nb = 0;
-	sign = 1;
 	i = 0;
-	if(str[i] == '-')
-		{
-			sign = -1;
-			i++;
-		}
-	while(str[i] != '\0' && str[i] != '-')
+	while(src[i] != '\0')
 	{
-		if(str[i]>= '0' && str[i]<='9')
-			nb = (nb *10) +(str[i++] - '0');
-		else
-			break;
+		dst[i] = src[i];
+		i++;
 	}
-	return (nb*sign);
+	dst[i] = '\0';
+	return (dst);
 }
