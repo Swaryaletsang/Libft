@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 16:04:54 by atau              #+#    #+#             */
-/*   Updated: 2019/05/21 12:01:38 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/22 12:06:08 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int			ft_isalnum(int c)
 	char ch;
 
 	ch = (unsigned char)c;
-	if(ft_isalpha(ch) || ft_isdigit(ch))
+	if (ft_isalpha(ch) || ft_isdigit(ch))
 		return (1);
 	return (0);
 }

@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:40:43 by atau              #+#    #+#             */
-/*   Updated: 2019/05/22 16:29:44 by atau             ###   ########.fr       */
+/*   Created: 2019/05/22 12:57:31 by atau              #+#    #+#             */
+/*   Updated: 2019/05/22 15:21:41 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strcpy(char *dst, const char *src)
+int			ft_strcmp(const char *str1, const char *str2)
 {
 	int i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (str1[i] != '\0' && str2[i] != '\0')
 	{
-		dst[i] = src[i];
+		if (str1[i] != str2[i])
+			return (str1[i] - str2[i]);
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	return (0);
 }

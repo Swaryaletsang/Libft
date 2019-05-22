@@ -6,23 +6,23 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:22:48 by atau              #+#    #+#             */
-/*   Updated: 2019/05/20 11:23:04 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/22 11:46:48 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "libft.h"
+#include "libft.h"
 
-void        *ft_memset(void *s, int c, size_t n)
+void		*ft_memset(void *s, int c, size_t n)
 {
-    char *b;
-    unsigned int i;
+	char		*b;
+	size_t		i;
 
-    i = 0;
-    b = (char *)s;
-    while(i < n)
-    {
-        b[i] = c;
-        i++;
-    }
-    return (s);
+	i = 0;
+	b = (char *)s;
+	while (i < n)
+	{
+		b[i] = c;
+		i++;
+	}
+	return (s);
 }

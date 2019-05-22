@@ -6,17 +6,18 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:11:16 by atau              #+#    #+#             */
-/*   Updated: 2019/05/21 09:40:49 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/22 11:24:13 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t     ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
-    unsigned int i;
+	size_t i;
 
-    i = 0;
-    while(str[i++] != '\0');
-    return (--i);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }

@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/21 15:40:43 by atau              #+#    #+#             */
-/*   Updated: 2019/05/22 16:29:44 by atau             ###   ########.fr       */
+/*   Created: 2019/05/22 14:47:54 by atau              #+#    #+#             */
+/*   Updated: 2019/05/22 15:25:07 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char		*ft_strcpy(char *dst, const char *src)
+#include "libft.h"
+
+int			ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int i;
+	unsigned int	i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (i < n)
 	{
-		dst[i] = src[i];
+		return (ft_strcmp(s1, s2));
 		i++;
 	}
-	dst[i] = '\0';
-	return (dst);
+	return (0);
 }

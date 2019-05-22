@@ -6,7 +6,7 @@
 #    By: atau <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 11:28:02 by atau              #+#    #+#              #
-#    Updated: 2019/05/21 09:43:22 by atau             ###   ########.fr        #
+#    Updated: 2019/05/22 16:55:16 by atau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,12 @@ SOURCE= ./ft_putchar.c	\
 		./ft_isascii.c	\
 		./ft_isdigit.c	\
 		./ft_isalnum.c	\
-		./ft_atoi.c	
+		./ft_atoi.c		\
+		./ft_isprint.c	\
+		./ft_strcmp.c	\
+		./ft_strcpy.c	\
+		./ft_strncpy.c	\
+		./ft_strncmp.c	
 CC= gcc
 FLAGS= -Wall -Werror -Wextra
 
