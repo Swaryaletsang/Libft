@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/05/22 17:11:31 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/23 12:50:14 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,6 @@ int			ft_strcmp(const char *str1, const char *str2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char		*ft_strcpy(char *dst, const char *src);
 char		*ft_strncpy(char *dest, const char *src, size_t n);
+char		*ft_strcat(char *str1, char *str2);
+char		*ft_strncat(char *s1, char *s2, size_t n);
 #endif

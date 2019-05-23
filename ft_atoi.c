@@ -6,30 +6,30 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 10:48:25 by atau              #+#    #+#             */
-/*   Updated: 2019/05/22 11:28:47 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/23 10:53:35 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int			ft_atoi(char *str)
 {
-	int nb;
+	int	nb;
 	int sign;
 	int i;
 
 	nb = 0;
 	sign = 1;
 	i = 0;
-	if(str[i] == '-')
-		{
-			sign = -1;
-			i++;
-		}
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
 	while (str[i] != '\0' && str[i] != '-')
 	{
-		if(str[i]>= '0' && str[i]<='9')
-			nb = (nb *10) +(str[i++] - '0');
+		if (str[i] >= '0' && str[i] <= '9')
+			nb = (nb * 10) + (str[i++] - '0');
 		else
-			break;
+			break ;
 	}
-	return (nb*sign);
+	return (nb * sign);
 }
