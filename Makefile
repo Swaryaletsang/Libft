@@ -32,7 +32,9 @@ SOURCE= ./ft_putchar.c	\
 		./ft_strncpy.c	\
 		./ft_strncmp.c	\
 		./ft_strcat.c	\
-		./ft_strncat.c	
+		./ft_strncat.c	\
+		./ft_strchr.c	\
+		./ft_strrchr.c
 CC= gcc
 FLAGS= -Wall -Werror -Wextra
 
