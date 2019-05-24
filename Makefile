@@ -6,7 +6,7 @@
 #    By: atau <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 11:28:02 by atau              #+#    #+#              #
-#    Updated: 2019/05/23 12:51:02 by atau             ###   ########.fr        #
+#    Updated: 2019/05/24 14:51:35 by atau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,9 @@ SOURCE= ./ft_putchar.c	\
 		./ft_strcat.c	\
 		./ft_strncat.c	\
 		./ft_strchr.c	\
-		./ft_strrchr.c
+		./ft_strrchr.c	\
+		./ft_memcmp.c	\
+		./ft_memchr.c	
 CC= gcc
 FLAGS= -Wall -Werror -Wextra
 

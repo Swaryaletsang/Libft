@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/05/23 12:50:14 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/24 14:51:30 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,6 @@ char		*ft_strcat(char *str1, char *str2);
 char		*ft_strncat(char *s1, char *s2, size_t n);
 char        *ft_strchr(const char *s, int c);
 char        *ft_strrchr(const char *s, int c);
+void		*ft_memchr(const void *s, int c, size_t n);
+void		ft_memcmp(const void *s1, const void *s2, size_t n);
 #endif
