@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 12:57:31 by atau              #+#    #+#             */
-/*   Updated: 2019/05/24 11:39:16 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/27 16:16:38 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int			ft_strcmp(const char *str1, const char *str2)
 	int i;
 
 	i = 0;
-	while (str1[i] != '\0' && str2[i] != '\0')
+	while (str1[i] != '\0' || str2[i] != '\0')
 	{
 		if (str1[i] != str2[i])
 			return (str1[i] - str2[i]);
