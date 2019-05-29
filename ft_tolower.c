@@ -6,21 +6,13 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:05:44 by atau              #+#    #+#             */
-/*   Updated: 2019/05/22 12:35:00 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/29 16:10:59 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int			ft_tolower(int c)
 {
-	char ch;
-
-	ch = (unsigned char)c;
-	if (ch >= 'A' && ch <= 'Z')
-	{
-		return (ch + 32);
-	}
-	else
-	{
-		return (ch);
-	}
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

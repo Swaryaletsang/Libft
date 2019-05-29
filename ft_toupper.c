@@ -6,21 +6,13 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 14:22:47 by atau              #+#    #+#             */
-/*   Updated: 2019/05/23 10:21:11 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/29 16:10:38 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int			ft_toupper(int c)
 {
-	char ch;
-
-	ch = (unsigned char)c;
-	if (ch >= 'a' && ch <= 'z')
-	{
-		return (ch - 32);
-	}
-	else
-	{
-		return (ch);
-	}
+	if (c >= 'a' && c <= 'z')
+		return (c - 32);
+	return (c);
 }

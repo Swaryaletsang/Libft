@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/05/28 16:24:48 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/29 17:20:38 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,10 @@ void		ft_putstr_fd(char const *s, int fd);
 void		ft_strclr(char *s);
 int			ft_strequ(char const *s1, char const *s2);
 int			ft_strnequ(char const *s1, char const *s2, size_t n);
+void		ft_memdel(void **ap);
+void		*ft_memalloc(size_t size);
+char		*ft_strnew(size_t size);
+void		ft_strdel(char **as);
+char		*ft_strdup(const char *s1);
 
 #endif

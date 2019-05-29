@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 09:24:20 by atau              #+#    #+#             */
-/*   Updated: 2019/05/28 15:42:02 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/29 15:47:10 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,11 @@ void		ft_putstr_fd(char const *s, int fd)
 	int i;
 
 	i = 0;
-	while (s[i++] != '\0')
+	if (s != NULL)
 	{
-		ft_putchar_fd(s[i], fd);
+		while (s[i++] != '\0')
+		{
+			ft_putchar_fd(s[i], fd);
+		}
 	}
 }
