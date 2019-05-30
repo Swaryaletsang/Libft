@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 15:56:38 by atau              #+#    #+#             */
-/*   Updated: 2019/05/29 16:00:03 by atau             ###   ########.fr       */
+/*   Updated: 2019/05/30 13:00:23 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int			ft_strequ(char const *s1, char const *s2)
 	if (s1 != NULL)
 	{
 		if (ft_strcmp(s1, s2))
-			return (1);
+			return (0);
 	}
-		return (0);
+	return (1);
 }

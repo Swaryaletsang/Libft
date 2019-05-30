@@ -6,7 +6,7 @@
 #    By: atau <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 11:28:02 by atau              #+#    #+#              #
-#    Updated: 2019/05/29 17:19:19 by atau             ###   ########.fr        #
+#    Updated: 2019/05/30 16:19:18 by atau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,12 @@ SOURCE= ./ft_putchar.c	\
 		./ft_memdel.c	\
 		./ft_strnew.c	\
 		./ft_strdel.c	\
-		./ft_strdup.c	
+		./ft_strdup.c	\
+		./ft_memmove.c	\
+		./ft_striter.c	\
+		./ft_striteri.c	\
+		./ft_strmap.c	\
+		./ft_strmapi.c	
 CC= gcc
 FLAGS= -Wall -Werror -Wextra
 

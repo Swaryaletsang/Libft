@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/29 10:22:47 by atau              #+#    #+#             */
-/*   Updated: 2019/05/30 17:05:18 by atau             ###   ########.fr       */
+/*   Created: 2019/05/30 15:52:04 by atau              #+#    #+#             */
+/*   Updated: 2019/05/30 17:01:36 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnew(size_t size)
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	size_t	i;
+	unsigned int	i;
+	char			*str;
 
-	if(!(str = (char *)malloc(size + 1)))
-		return (NULL);
 	i = 0;
-	while (i != (size + 1))
+	if (s == NULL)
+		return (NULL);
+	if (!(str = (char *)malloc(ft_strlen(s) + 1)))
+		return (NULL);
+	while (s[i] != '\0')
 	{
-		str[i] = '\0';
+		str[i] = f(i,(char)s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
