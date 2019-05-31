@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsub.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 08:45:58 by atau              #+#    #+#             */
-/*   Updated: 2019/05/31 09:40:53 by atau             ###   ########.fr       */
+/*   Created: 2019/05/31 10:00:14 by atau              #+#    #+#             */
+/*   Updated: 2019/05/31 11:27:47 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strsub(char const *s, unsigned int start, size_t len)
+void		*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
-	char	*substr;
-	unsigned int		i;
+	unsigned int	i;
+	unsigned char	*d;
+	unsigned char	*s;
 
+	d = (unsigned char *)dest;
+	s = (unsigned char *)src;
 	i = 0;
-	if (s == NULL)
-		return (NULL);
-	if (!(substr = (char *)malloc(sizeof(char) * len + 1)))
-		return (NULL);
-	while (len > i)
+	while (n > i)
 	{
-		substr[i++] = s[start++];
+		d[i] = s[i];
+		if (s[i] == (unsigned char)c)
+			return ((char *)&dest[i + 1]);
+		i++;
 	}
-	substr[i] = '\0';
-	return (substr);
+	return (NULL);
 }
