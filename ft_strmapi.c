@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 15:52:04 by atau              #+#    #+#             */
-/*   Updated: 2019/05/30 17:01:36 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/03 14:25:31 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char		*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		return (NULL);
 	while (s[i] != '\0')
 	{
-		str[i] = f(i,(char)s[i]);
+		str[i] = f(i, (char)s[i]);
 		i++;
 	}
 	str[i] = '\0';

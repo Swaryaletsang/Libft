@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 10:22:47 by atau              #+#    #+#             */
-/*   Updated: 2019/05/30 17:05:18 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/03 14:24:52 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char		*ft_strnew(size_t size)
 	char	*str;
 	size_t	i;
 
-	if(!(str = (char *)malloc(size + 1)))
+	if (!(str = (char *)malloc(size + 1)))
 		return (NULL);
 	i = 0;
 	while (i != (size + 1))

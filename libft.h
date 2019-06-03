@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/05/31 11:10:38 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/03 15:34:22 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ char		*ft_strrchr(const char *s, int c);
 void		*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t len);
+int			ft_isspace(int c);
+size_t		ft_strlcat(char *dest, const char *src, size_t destsize);
 
 void		ft_putendl(char const *s);
 void		ft_putchar_fd(char c, int fd);
@@ -58,7 +60,7 @@ char		*ft_strnew(size_t size);
 void		ft_strdel(char **as);
 char		*ft_strdup(const char *s1);
 void		ft_striter(char *s, void (*f)(char *));
-void		ft_striteri(char *, void (*f)(unsigned int, char *));
+void		ft_striteri(char *s, void (*f)(unsigned int, char *));
 char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
