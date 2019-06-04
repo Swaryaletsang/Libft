@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/06/03 15:34:22 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/04 17:26:54 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,7 @@ char		*ft_strmap(char const *s, char (*f)(char));
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char		*ft_strsub(char const *s, unsigned int start, size_t len);
 void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1);
+char		*ft_strstr(const char *hay, const char *needle);
 #endif

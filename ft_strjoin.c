@@ -1,30 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 14:48:44 by atau              #+#    #+#             */
-/*   Updated: 2019/06/04 15:40:47 by atau             ###   ########.fr       */
+/*   Created: 2019/06/04 12:42:15 by atau              #+#    #+#             */
+/*   Updated: 2019/06/04 12:52:26 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlcat(char *dest, const char *src, size_t destsize)
+char		*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
+	char	*str;
+	int		i;
 	int		j;
 
-	i = ft_strlen(dest);
+	if (s1 == NULL)
+		return (NULL);
+	if (!(str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
+		return (NULL);
+	i = 0;
+	while (s1[i] != '\0')
+	{
+		str[i] = s1[i];
+		i++;
+	}
 	j = 0;
-	while (src[j] != '\0' && i + 1 < destsize)
-		dest[i++] = src[j++];
-	if (ft_strlen(dest) < destsize)
-		dest[i] = '\0';
-	if (ft_strlen(dest) > destsize)
-		return (destsize + ft_strlen(src));
-	else
-		return (ft_strlen(dest) + ft_strlen(src));
+	while (s2[j] != '\0')
+	{
+		str[i++] = s2[j++];
+	}
+	str[i] = '\0';
+	return (str);
 }

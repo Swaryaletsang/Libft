@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 14:48:44 by atau              #+#    #+#             */
-/*   Updated: 2019/06/04 15:40:47 by atau             ###   ########.fr       */
+/*   Created: 2019/06/04 16:25:55 by atau              #+#    #+#             */
+/*   Updated: 2019/06/04 17:37:40 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlcat(char *dest, const char *src, size_t destsize)
+char		*ft_strstr(const char *hay, const char *needle)
 {
-	size_t	i;
-	int		j;
+	int 	i;
+	int 	j;
+	char	*ptr;
 
-	i = ft_strlen(dest);
-	j = 0;
-	while (src[j] != '\0' && i + 1 < destsize)
-		dest[i++] = src[j++];
-	if (ft_strlen(dest) < destsize)
-		dest[i] = '\0';
-	if (ft_strlen(dest) > destsize)
-		return (destsize + ft_strlen(src));
-	else
-		return (ft_strlen(dest) + ft_strlen(src));
+	if (needle[0] == '\0')
+		return ((char *)hay);
+	i = 0;
+	while (hay[i] != '\0')
+	{
+		j = 0;
+		while(hay[i + j] == needle[j])
+		{
+			ptr = (char *)&hay[i];
+			if(needle[j + 1] == '\0')
+				return (ptr);
+			j++;
+		}
+		i++;
+	}
+	return (NULL);
 }
