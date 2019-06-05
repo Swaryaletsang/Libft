@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/06/04 17:26:54 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/05 15:54:16 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 void		*ft_memmove(void *dest, const void *src, size_t len);
 int			ft_isspace(int c);
 size_t		ft_strlcat(char *dest, const char *src, size_t destsize);
+char		*ft_strnstr(const char *hay, const char *needle, size_t len);
 
 void		ft_putendl(char const *s);
 void		ft_putchar_fd(char c, int fd);
