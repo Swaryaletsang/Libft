@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/06/05 15:54:16 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/07 10:47:21 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,4 +69,5 @@ void		*ft_memccpy(void *dest, const void *src, int c, size_t n);
 char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1);
 char		*ft_strstr(const char *hay, const char *needle);
+char		**ft_strsplit(char const *s, char c);
 #endif
