@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 11:20:52 by atau              #+#    #+#             */
-/*   Updated: 2019/06/07 10:47:21 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/08 14:41:59 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,5 @@ char		*ft_strjoin(char const *s1, char const *s2);
 char		*ft_strtrim(char const *s1);
 char		*ft_strstr(const char *hay, const char *needle);
 char		**ft_strsplit(char const *s, char c);
+char		*ft_itoa(int n);
 #endif
