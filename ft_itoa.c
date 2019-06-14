@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/08 12:50:12 by atau              #+#    #+#             */
-/*   Updated: 2019/06/08 15:04:56 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/14 14:00:01 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,3 @@ char			*ft_itoa(int n)
 		}
 		return (str);
 }
-/*#include <stdio.h>
-#include <limits.h>
-
-int main(void)
-{
-		printf("%d\n", INT_MIN);
-		
-		return 0;
-}*/

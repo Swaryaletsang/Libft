@@ -6,7 +6,7 @@
 /*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 12:42:15 by atau              #+#    #+#             */
-/*   Updated: 2019/06/04 12:52:26 by atau             ###   ########.fr       */
+/*   Updated: 2019/06/14 14:14:32 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	if (s1 == NULL)
+	if (!s1 || !s2)
 		return (NULL);
 	if (!(str = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1)))
 		return (NULL);

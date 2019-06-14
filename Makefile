@@ -6,7 +6,7 @@
 #    By: atau <marvin@42.fr>                        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 11:28:02 by atau              #+#    #+#              #
-#    Updated: 2019/06/11 15:24:47 by atau             ###   ########.fr        #
+#    Updated: 2019/06/14 13:53:20 by atau             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,7 +65,12 @@ SOURCE= ./ft_putchar.c	\
 		./ft_strnstr.c	\
 		./ft_strsplit.c	\
 		./ft_itoa.c		\
-		./ft_lstnew.c	
+		./ft_lstnew.c	\
+		./ft_lstdel.c	\
+		./ft_lstadd.c	\
+		./ft_lstdelone.c	\
+		./ft_lstiter.c	\
+		./ft_lstmap.c	
 CC= gcc
 FLAGS= -Wall -Werror -Wextra
 
@@ -78,7 +83,7 @@ $(NAME):
 	ar -rcv $@ *.o libft.h
 
 clean:
-	rm -f *.o a.out
+	rm -f *.o
 fclean: clean
-	rm -rf $(NAME)
+	rm -f $(NAME)
 re: fclean all

@@ -3,31 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atau <marvin@42.fr>                  		+#+  +:+       +#+        */
+/*   By: atau <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/13 19:10:28 by oarabetse         #+#    #+#             */
-/*   Updated: 2019/06/14 01:54:40 by oarabetse        ###   ########.fr       */
+/*   Created: 2019/06/14 11:32:53 by atau              #+#    #+#             */
+/*   Updated: 2019/06/14 14:39:36 by atau             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
+t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-		t_list *new;
-		t_list *iter;
+	t_list *new;
+	t_list *temp;
 
-		new = (t_list *)malloc(sizeof(t_list));
-		if (new == NULL)
-				return (NULL);
-		iter = f(lst);
-		new = iter;
-		while (lst->next != NULL )
-		{
-				lst = lst->next;
-				new->next = f(lst);
-				new = new->next;
-		}
-		new->next = NULL;
-		return (new);
+	if (!lst || !f)
+		return (NULL);
+	new = f(lst);
+	temp = new;
+	while ((lst = lst->next))
+	{
+		temp->next = f(lst);
+		temp = temp->next;
+	}
+	return (new);
 }
